@@ -13,3 +13,7 @@ __pycache__/
 ロードマップ.md
 .claude/
 check_fonts.py
+
+# 学習用の練習ファイル（本番コードと重複するので非公開）
+oita_practice.py
+oita_practice.png
