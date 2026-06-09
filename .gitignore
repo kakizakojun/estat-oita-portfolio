@@ -1,0 +1,15 @@
+# APIキー（appId）は絶対に公開しない
+appid.txt
+
+# Python のキャッシュ
+__pycache__/
+*.pyc
+
+# Mac の不要ファイル
+.DS_Store
+
+# 公開しない個人ファイル（応募先向けの志望動機・戦略メモ・ローカル設定）
+志望動機.md
+ロードマップ.md
+.claude/
+check_fonts.py
