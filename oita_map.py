@@ -3,6 +3,7 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib
+import matplotlib.patheffects as pe
 matplotlib.rcParams['font.family'] = 'Hiragino Sans'
 
 # 境界データ（GeoJSON）をURLから読み込む
@@ -46,10 +47,11 @@ for v in 値リスト:
 print(地図[["N03_004", "高齢化率"]])
 
 # 高齢化率を市町村ごとに色分け、市町村名も記載し、画像保存する
-ax = 地図.plot(column = "高齢化率", cmap="OrRd", legend = True, edgecolor="black")
+ax = 地図.plot(column = "高齢化率", cmap="OrRd", legend = True, edgecolor="black", figsize=(10,10))
 for idx, row in 地図.iterrows():
     中心 = row["geometry"].centroid
-    ax.text(中心.x, 中心.y, row["N03_004"], ha = "center", fontsize=7)
+    ax.text(中心.x, 中心.y, row["N03_004"], ha = "center", fontsize=7,
+    path_effects=[pe.withStroke(linewidth=2, foreground="white")])
 
 plt.title("大分県 市町村別の高齢化率（令和2年 国勢調査）")
 plt.savefig("oita_map.png")
