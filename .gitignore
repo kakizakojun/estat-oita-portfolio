@@ -17,3 +17,7 @@ check_fonts.py
 # 学習用の練習ファイル（本番コードと重複するので非公開）
 oita_practice.py
 oita_practice.png
+
+# 画像は既定の大分県だけ公開（他県を生成しても誤ってcommitしない）
+images/*
+!images/大分県/

@@ -39,8 +39,8 @@ for i, value in enumerate(df["高齢化率"]):
     plt.text(value + 0.3, i, f"{value}%", va="center")
 
 plt.tight_layout()                                # レイアウトを整える
-plt.savefig("oita_aging.png", dpi=120)            # 画像ファイルとして保存
-print("グラフを oita_aging.png に保存しました。")
+plt.savefig("aging_demo.png", dpi=120)            # 画像ファイルとして保存
+print("グラフを aging_demo.png に保存しました。")
 
 # --- 4. 簡単な考察を数字で出す ---
 top = df.iloc[-1]    # 最も高い市町村
